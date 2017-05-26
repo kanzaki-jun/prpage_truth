@@ -820,8 +820,8 @@ th {
 }
 
 .extra img {
-	width: 50%;
-	height: 100%;
+	width: 40%;
+	height: auto;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -832,8 +832,8 @@ th {
 }
 
 .extra2 img {
-	width: 50%;
-	height: 100%;
+	width: 25%;
+	height: 25%;
 	margin: 0;
 	padding: 0;
 	border: 0;
