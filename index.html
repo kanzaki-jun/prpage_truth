@@ -1,0 +1,143 @@
+<!DOCTYPE html>	<!--HTML5で書かれていることについての宣言-->
+<head>
+<title>構造解析チーム</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/conf.css">
+<link rel="stylesheet" type="text/css" href="css/th.css">
+
+</head>
+
+<body id=gikaihon-katudou class=kiban-gijutu>
+<div id=container class=nav>
+	<div id=wrap>
+		<div id=cont-main>
+			<div id=head>
+				<h1>RD解析チームのご紹介</h1>
+				<h2>構造解析チームで対応する解析一覧表</h2>
+				<hr>
+				<div id=main>
+						<div id=list-box>
+							<ul>  <!--Unordered listの略で、順序のないリスト。ordered listの略のolも存在し、そちらは順序ありリストである。-->
+								<li>解析種類<br></li>
+								<li><A href="subpage/static.html">静強度解析</A> <br></li>
+								<li><A href="subpage/buckling.html">座屈固有値解析</A><br></li>
+								<li><A href="subpage/heat.html">熱解析</A> <br></li>
+								<li><A href="subpage/oscillate.html">振動解析</A> <br></li>
+								<li><A href="subpage/bal.html">弾塑性変形解析</A><br></li>
+								<li><A href="subpage/col.html">衝突解析</A><br> </li>
+								<li><A href="subpage/format.html">最適化</A> <br></li>
+							</ul>
+						</div>
+						<div>
+							<table	class="text_align_center"> <!--<table>は表を作成します。 tableのタグ内においてはth,tr,tdで管理されます。それぞれタイトル、行、列を管理します。-->
+								<!--
+									colspan = 2		水平(横)方向のセルの結合数を指定(この場合 水平方向にセルを2個結合) 
+									rowspan = 2		垂直(縦)方向のセルの結合数を指定(この場合 垂直方向にセルを2個結合) 
+								-->
+								<tr><!--1行目-->
+									<th	width="250"	colspan="2">解析手法</th>
+									<th	width="167">RD所有解析プログラム</th>
+									<th	width="421">解析紹介</th>
+								</tr><!--1行目-->
+								
+								<tr><!--2行目-->
+									<td	rowspan="3">線形<br>静解析</td>
+									<td>静強度解析</td>
+									<td	rowspan	=	"4">Optistruct<BR>Nastran</td>
+									<td	class="left">基本的な線形静強度解析</td>
+								</tr><!--2行目-->
+								
+								<tr><!--3行目-->
+									<td>座屈固有値<br>解析</td>
+									<td	class="left">構造の座屈強度を求める線形解析</td>
+								</tr><!--3行目-->
+								
+								<tr><!--4行目-->
+									<td>熱解析</td>
+									<td	class="left">温度変化による熱変形を求める線形解析<BR>
+													熱伝導による温度分布を求める線形解析</td>
+								</tr><!--4行目-->
+								
+								<tr><!--5行目-->
+									<td>線形<br>静解析<BR>線形<br>動解析</td>
+									<td>振動解析</td>
+									<td	class="left">構造の固有振動数を求める線形解析<BR>
+													構造の振動応答特性を求める線形解析<BR>
+													構造のランダム振動に対する強度解析
+									</td>
+								</tr><!--5行目-->
+								
+								<tr><!--6行目-->
+									<td	rowspan="2">非線形<br>解析</td>
+									<td>弾塑性大変形解析</td>
+									<td	rowspan	=	"2">LS-Dyna</td>
+									<td	class="left">材料の弾塑性・大変形を考慮した非線形解析</td>
+								</tr><!--6行目-->
+								
+								<tr><!--7行目-->
+									<td>衝突解析</td>
+									<td	class="left">材料の弾塑性・大変形を考慮した非線形動解析</td>
+								</tr><!--7行目-->
+								
+								<tr><!--8行目-->
+									<td	colspan="2">最適化解析</td>
+									<td>Optistruct<BR>HyperSTUDY</td>
+									<td	class="left">部材分布の最適化（肉抜きできる部位を探す）<BR>
+													部材寸法の最適化（主に板厚の最適化<BR>
+													部材形状の最適化<BR>
+													板ビード形状の最適化<BR>
+									</td>
+								</tr><!--8行目-->
+								
+								<tr><!--9行目-->
+									<td	colspan="2">機構解析</td>
+									<td	rowspan="2">MotionSolve<BR>Acusolve</td>
+									<td	class="left">機構・システムの挙動を求める動的解析</td>
+								</tr><!--9行目-->
+								
+								<tr><!--10行目-->
+									<td	colspan="2">流体解析</td>
+									<td	class="left">調査中</td>
+								</tr><!--10行目-->
+								
+								<tr><!--11行目-->
+									<td	colspan="2">電磁場解析</td>
+									<td>FEKO</td>
+									<td	class="left">調査中</td>
+								</tr><!--11行目-->
+							</table>
+						</div>
+						<h2>メンバー表</h2>
+						<hr>
+						<p>実案件における上記解析依頼、又は新しい解析技術開発のご要望等ありましたら、<br>以下のメンバーまでご連絡ください。</p>
+						<br>
+						<ul class="ulplus" style="list-style-type:disc;"> <!--Unordered listの略で、順序のないリスト-->
+							<li>name:A &nbsp; 内線: &nbsp; mail:<br></li>
+							<li>name:A &nbsp; 内線: &nbsp; mail:<br></li>
+							<li>name:A &nbsp; 内線: &nbsp; mail:<br></li>
+							<li>name:A &nbsp; 内線: &nbsp; mail:<br></li>
+							<li>name:A &nbsp; 内線: &nbsp; mail:<br></li>
+							<li>name:A &nbsp; 内線: &nbsp; mail:<br></li>
+							<li>name:A &nbsp; 内線: &nbsp; mail:<br></li>
+						</ul>
+						<br>
+						<h2>アクションプラン</h2>
+						<hr>
+						<br>
+						<ul>
+							<li>ここにテキストを記述します。<br></li>
+							<li>ここにテキストを記述します。<br></li>
+							
+						</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+</BODY>
+</html>

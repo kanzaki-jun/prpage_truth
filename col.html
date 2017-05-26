@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+
+	<!--ページを表示する際のタブのタイトル-->
+	<title>構造解析チーム</title>
+	<link rel="stylesheet" type="text/css" href="../css/conf.css">
+
+
+	<!--menu-->
+	<link rel="stylesheet" href="../css/navi.css" media="screen, projection, print">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function(){
+			var menu = $('#slide_menu'),
+    		menuBtn = $('#button'),
+    		body = $(document.body),
+    		// .layer もオブジェクト化    
+    		layer = $('.layer'),
+    		menuWidth = menu.outerWidth();                
+        	menuBtn.on('click', function(){
+    			body.toggleClass('open');
+        		if(body.hasClass('open')){
+            		// css で非表示にしていた .layer を表示
+            		$(".layer").show();
+            		body.animate({'left' : menuWidth }, 300);
+            		menu.animate({'left' : 0 }, 300);                    
+        		} else {
+            		// .layer を非表示
+            		$(".layer").hide();
+            		menu.animate({'left' : -menuWidth }, 300);
+            		body.animate({'left' : 0 }, 300);            
+        		}             
+    		});
+    		// .layer をクリック時にもメニューを閉じる
+    		layer.on('click', function(){
+            	menu.animate({'left' : -menuWidth }, 300);
+            	body.animate({'left' : 0 }, 300).removeClass('open');
+            	layer.hide();
+    		});
+		});
+	</script>
+	<!--menu-->
+</head>
+
+<BODY id=gikaihon-katudou class=kiban-gijutu style="ZOOM: 1" sizzle-1494284058946="[object Object]"><DIV id=container class=nav>
+
+ <!-- スライドメニュー部分-->
+ <div class="layer"></div>
+ <div class="container">
+    <nav id="slide_menu">
+        <ul>
+        	<LI><A href="../index.html">Top</A> <BR></LI>
+			<LI><A href="static.html">(線形)静強度解析</A> <BR></LI>
+			<LI><A href="buckling.html">座屈固有値解析</A><BR></LI>
+			<LI><A href="heat.html">熱解析</A> <BR></LI>
+			<LI><A href="oscillate.html">振動解析</A> <BR></LI>
+			<li><A href="bal.html">弾塑性大変形解析</A><br> </li>
+			<LI><A href="format.html">最適化</A> <BR></LI>
+        </ul>
+    </nav>
+
+    <!--メニューを出すボタン-->
+    <button id="button"><i class="fa fa-bars"></i> Menu</button>
+
+    <div class="content">
+        <section>
+           
+    </div><!-- /.content -->	
+  </div>
+ <!-- スライドメニュー部分-->
+
+<DIV id=header>
+<DIV id=g-header>
+<DIV id=g-header>
+</DIV>
+
+</DIV>
+<DIV id=blank></DIV>
+<DIV id=wrap>
+<DIV id=cont-main>
+<DIV id=head>
+<H1>構造解析チームで対応する解析一覧表</H1>
+<form class="text_align_right">
+    <input type="button" value="このページを印刷" onclick="window.print();" />
+</form>
+<DIV id=search></DIV>
+<HR>
+</DIV>
+<DIV id=main>
+
+
+
+<DIV id=ex1 class=box1>
+<H3>衝突解析</H3>
+<p>
+</p>
+<DIV class=image>
+<TABLE>
+
+<th align = left>寸法最適化</th>
+
+<tr>
+<td><IMG src="../graphic/col1.png" align = left></TD><td align = "left" width = "50%" valign="center" >衝突時の動的な挙動を評価できます。<br>モデル化した車両一両やスカートなどの一部分を<br>対象物と衝突させた場合の、時間軸に沿った<br>変形やエネルギーの変化などを確認します。</td>
+
+
+
+</tr>
+
+<tr>
+<TD align left>GV-E400編成衝突解析</TD>
+</tr>
+
+<th align = "left">トポロジー最適化</th>
+
+<tr></tr>
+
+<TR>
+
+
+<TD><IMG src="../graphic/col2.png"  align = left></TD><td align = "left" valign="top">対象物としては、<br>トラックや猪（動物）、雪などがあります。</td>
+
+</tr>
+
+<tr>
+<TD align left>DECスカート猪衝突解析</TD>
+</tr>
+
+</TABLE>
+
+
+</DIV>
+<p id=back><a href="#" onClick="history.back(); return false;" >前のページにもどる</a></p>
+</DIV>
+
+
+
+
+
+</BODY>
+</html>
+
+
+

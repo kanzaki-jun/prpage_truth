@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+
+	<!--ページを表示する際のタブのタイトル-->
+	<title>構造解析チーム</title>
+	<link rel="stylesheet" type="text/css" href="../css/conf.css">
+
+
+	<!--menu-->
+	<link rel="stylesheet" href="../css/navi.css" media="screen, projection, print">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function(){
+			var menu = $('#slide_menu'),
+    		menuBtn = $('#button'),
+    		body = $(document.body),
+    		// .layer もオブジェクト化    
+    		layer = $('.layer'),
+    		menuWidth = menu.outerWidth();                
+        	menuBtn.on('click', function(){
+    			body.toggleClass('open');
+        		if(body.hasClass('open')){
+            		// css で非表示にしていた .layer を表示
+            		$(".layer").show();
+            		body.animate({'left' : menuWidth }, 300);
+            		menu.animate({'left' : 0 }, 300);                    
+        		} else {
+            		// .layer を非表示
+            		$(".layer").hide();
+            		menu.animate({'left' : -menuWidth }, 300);
+            		body.animate({'left' : 0 }, 300);            
+        		}             
+    		});
+    		// .layer をクリック時にもメニューを閉じる
+    		layer.on('click', function(){
+            	menu.animate({'left' : -menuWidth }, 300);
+            	body.animate({'left' : 0 }, 300).removeClass('open');
+            	layer.hide();
+    		});
+		});
+	</script>
+	<!--menu-->
+</head>
+
+<BODY id=gikaihon-katudou class=kiban-gijutu style="ZOOM: 1" sizzle-1494284058946="[object Object]"><DIV id=container class=nav>
+
+ <!-- スライドメニュー部分-->
+ <div class="layer"></div>
+ <div class="container">
+    <nav id="slide_menu">
+        <ul>
+        	<LI><A href="../index.html">Top</A> <BR></LI>
+			<LI><A href="static.html">(線形)静強度解析</A> <BR></LI>
+			<LI><A href="buckling.html">座屈固有値解析</A><BR></LI>
+			<LI><A href="heat.html">熱解析</A> <BR></LI>
+			<LI><A href="col.html">衝突解析</A><BR> </LI>
+			<li><A href="bal.html">弾塑性大変形解析</A><br> </li>
+			<LI><A href="format.html">最適化</A> <BR></LI>
+        </ul>
+    </nav>
+
+    <!--メニューを出すボタン-->
+    <button id="button"><i class="fa fa-bars"></i> Menu</button>
+
+    <div class="content">
+        <section>
+           
+    </div><!-- /.content -->	
+  </div>
+ <!-- スライドメニュー部分-->
+
+<DIV id=header>
+<DIV id=g-header>
+<DIV id=g-header>
+</DIV>
+
+<DIV id=blank></DIV>
+
+</DIV>
+
+<DIV id=wrap>
+<DIV id=cont-main>
+<DIV id=head>
+<H1>構造解析チームで対応する解析一覧表</H1>
+<form class = "text_align_right">
+    <input type="button" value="このページを印刷" onclick="window.print();" />
+</form>
+<DIV id=search></DIV>
+<HR>
+</DIV>
+<DIV id=main>
+
+
+
+<DIV id=ex1 class=box1>
+<H3>振動固有値解析・周波数応答解析・ランダム振動応答解析</H3>
+<DIV class=image>
+<TABLE>
+
+<th >振動固有値解析</th>
+
+<TR>
+<TD><IMG src="../graphic/oscillate1.png" align = left></TD><td align = "left" width = "50%" valign="top">構造物の固有振動数を求めます。</td>
+
+
+
+</TR>
+
+<tr>
+<TD align left>E5系構体振動固有値解析</TD>
+</tr>
+
+<th>周波数応答解析</th>
+
+<tr></tr>
+
+<TR>
+
+
+<TD><IMG src="../graphic/oscillate2.png"  align = left></TD><td align = "left" valign="top">構造物の振動応答特性を求めます。<br>乗り心地や共振現象を評価します</td>
+
+</tr>
+
+<tr>
+<TD align left>E5系周波数応答解析</TD>
+</tr>
+<th>ランダム振動応答解析</th>
+<TR>
+<TD><IMG src="../graphic/oscillate3.png" align = left></TD><td align = "left" valign="top">構造物のランダム振動に対する<br>耐久性を評価します。</td>
+
+</TR>
+<tr>
+<TD align left>M9機器箱ランダム振動応答解析</TD></TR>
+</tr>
+
+
+</TABLE>
+
+</DIV>
+<p id=back><a href="#" onClick="history.back(); return false;" >前のページにもどる</a></p>
+</DIV>
+
+
+
+
+
+
+</BODY>
+</html>

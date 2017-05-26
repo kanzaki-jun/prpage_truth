@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+
+	<!--ページを表示する際のタブのタイトル-->
+	<title>構造解析チーム</title>
+	<link rel="stylesheet" type="text/css" href="../css/conf.css">
+	<link rel="stylesheet" type="text/css" href="../css/th.css">
+
+	<!--menu-->
+	<link rel="stylesheet" href="../css/navi.css" media="screen, projection, print">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function(){
+			var menu = $('#slide_menu'),
+    		menuBtn = $('#button'),
+    		body = $(document.body),
+    		// .layer もオブジェクト化    
+    		layer = $('.layer'),
+    		menuWidth = menu.outerWidth();                
+        	menuBtn.on('click', function(){
+    			body.toggleClass('open');
+        		if(body.hasClass('open')){
+            		// css で非表示にしていた .layer を表示
+            		$(".layer").show();
+            		body.animate({'left' : menuWidth }, 300);
+            		menu.animate({'left' : 0 }, 300);                    
+        		} else {
+            		// .layer を非表示
+            		$(".layer").hide();
+            		menu.animate({'left' : -menuWidth }, 300);
+            		body.animate({'left' : 0 }, 300);            
+        		}             
+    		});
+    		// .layer をクリック時にもメニューを閉じる
+    		layer.on('click', function(){
+            	menu.animate({'left' : -menuWidth }, 300);
+            	body.animate({'left' : 0 }, 300).removeClass('open');
+            	layer.hide();
+    		});
+		});
+	</script>
+	<!--menu-->
+</head>
+
+<BODY id=gikaihon-katudou class=kiban-gijutu style="ZOOM: 1" sizzle-1494284058946="[object Object]">
+<DIV id=container class=nav>
+
+
+ <!-- スライドメニュー部分-->
+ <div class="layer"></div>
+ <div class="container">
+    <nav id="slide_menu">
+        <ul>
+        	<LI><A href="../index.html">Top</A> <BR></LI>
+			<LI><A href="static.html">(線形)静強度解析</A> <BR></LI>
+			<LI><A href="buckling.html">座屈固有値解析</A><BR></LI>
+			<LI><A href="heat.html">熱解析</A> <BR></LI>
+			<LI><A href="oscillate.html">振動解析</A> <BR></LI>
+			<LI><A href="col.html">衝突解析</A><BR> </LI>
+			<li><A href="bal.html">弾塑性大変形解析</A><br> </li>
+			<LI><A href="format.html">最適化</A> <BR></LI>
+        </ul>
+    </nav>
+
+    <!--メニューを出すボタン-->
+    <button id="button"><i class="fa fa-bars"></i> Menu</button>
+
+    <div class="content">
+        <section>
+           
+    </div><!-- /.content -->	
+  </div>
+ <!-- スライドメニュー部分-->
+
+
+<DIV id=header>
+<DIV id=g-header>
+<DIV id=g-header>
+</DIV>
+
+</DIV>
+
+
+
+<DIV id=blank></DIV></DIV>
+<DIV id=wrap>
+<DIV id=cont-main>
+<DIV id=head>
+<H1>構造解析チームで対応する解析一覧表</H1>
+
+<form class="text_align_right">
+    <input type="button" value="このページを印刷" onclick="window.print();" />
+</form>
+
+<DIV id=main><!-- #main -->
+
+
+<div>
+            <table class="text_align_center">
+              <tr>
+                <th width="250" colspan="2">解析手法</th>
+                <th width="167">RD所有解析プログラム</th>
+                <th width="421">解析紹介</th>
+              </tr>
+              <tr>
+              	<td rowspan="3">線形<br>静解析</td>
+                <td>静強度解析</td>
+                <td rowspan = "4">Optistruct<BR>Nastran</td>
+                <td>基本的な線形静強度解析</td>
+              </tr>
+              <tr>
+              	<td>座屈固有値<br>解析</td>
+                <td>構造の座屈強度を求める線形解析</td>
+              </tr>
+              <tr>
+                <td>熱解析</td>
+                <td>温度変化による熱変形を求める線形解析<BR>
+                    熱伝導による温度分布を求める線形解析</td>
+              </tr>
+              <tr>
+              	<td>線形<br>静解析<BR>線形<br>動解析</td>
+              	<td>振動解析</td>
+              	<td>構造の固有振動数を求める線形解析<BR>
+              	    構造の振動応答特性を求める線形解析<BR>
+              	    構造のランダム振動に対する強度解析</td>
+              </tr>
+              <tr>
+              	<td rowspan="2">非線形<br>解析</td>
+              	<td>弾塑性大変形解析</td>
+              	<td rowspan = "2">LS-Dyna</td>
+              	<td>材料の弾塑性・大変形を考慮した非線形解析</td>
+              </tr>
+              <tr>
+              	<td>衝突解析</td>
+              	<td>材料の弾塑性・大変形を考慮した非線形動解析</td>
+              </tr>
+              <tr>
+              	<td colspan="2">最適化解析</td>
+              	<td>Optistruct<BR>HyperSTUDY</td>
+              	<td>部材分布の最適化（肉抜きできる部位を探す）<BR>
+              		部材寸法の最適化（主に板厚の最適化<BR>
+              		部材形状の最適化<BR>
+              		板ビード形状の最適化<BR></td>
+              </tr>
+              <tr>
+              	<td colspan="2">機構解析</td>
+              	<td rowspan="2">MotionSolve<BR>Acusolve</td>
+              	<td>機構・システムの挙動を求める動的解析</td>
+              </tr>
+              <tr>
+              	<td colspan="2">流体解析</td>
+              	<td>調査中</td>
+              </tr>
+              <tr>
+              	<td colspan="2">電磁場解析</td>
+              	<td>FEKO</td>
+              	<td>調査中</td>
+              </tr>
+            </table>
+</div>
+<p id=back><a href="#" onClick="history.back(); return false;" >前のページにもどる</a></p>
+</BODY>
+</html>
