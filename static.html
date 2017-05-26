@@ -48,86 +48,69 @@
 	<!--menu-->
 </head>
 
-<body id=gikaihon-katudou class=kiban-gijutu style="ZOOM: 1"><div id=container class=nav>
+<body id=gikaihon-katudou class=kiban-gijutu style="ZOOM: 1">
+<div id=container class=nav>
 
+	<!-- スライドメニュー部分--> 
+	<div class="layer"></div>
+	<div class="container">
+		<nav id="slide_menu">
+        	<ul>
+        		<LI><A href="../index.html">Top</A> <BR></LI>
+				<LI><A href="buckling.html">座屈固有値解析</A><BR></LI>
+				<LI><A href="heat.html">熱解析</A> <BR></LI>
+				<LI><A href="oscillate.html">振動解析</A> <BR></LI>
+				<LI><A href="col.html">衝突解析</A><BR> </LI>
+				<li><A href="bal.html">弾塑性大変形解析</A><br> </li>
+				<LI><A href="format.html">最適化</A> <BR></LI>
+        	</ul>
+    	</nav>
 
- <!-- スライドメニュー部分-->
- <div class="layer"></div>
- <div class="container">
-    <nav id="slide_menu">
-        <ul>
-        	<LI><A href="../index.html">Top</A> <BR></LI>
-			<LI><A href="buckling.html">座屈固有値解析</A><BR></LI>
-			<LI><A href="heat.html">熱解析</A> <BR></LI>
-			<LI><A href="oscillate.html">振動解析</A> <BR></LI>
-			<LI><A href="col.html">衝突解析</A><BR> </LI>
-			<li><A href="bal.html">弾塑性大変形解析</A><br> </li>
-			<LI><A href="format.html">最適化</A> <BR></LI>
-        </ul>
-    </nav>
-
-    <!--メニューを出すボタン-->
-    <button id="button"><i class="fa fa-bars"></i> Menu</button>
-
-    <div class="content">
-        <section>
-           
-    </div><!-- /.content -->	
-  </div>
+		<!--メニューを出すボタン-->
+		<button id="button"><i class="fa fa-bars"></i> Menu</button>
+	</div>
   
-<DIV id=header>
-<DIV id=g-header>
-<DIV id=g-header>
-</DIV>
+	<DIV id=header>
+		<DIV id=g-header>
+			<DIV id=blank></DIV>
+		</DIV>
+		<div id=wrap>
+			<div id=cont-main>
+				<div id=head>
+					<h1>構造解析チームで対応する解析一覧表</h1>
 
-<DIV id=blank></DIV>
+					<!--このページを印刷に関する設定-->
+					<form class="text_align_right">
+    					<input type="button" value="このページを印刷" onclick="window.print();" />
+					</form>
+					<!--このページを印刷に関する設定-->
+					<HR>
+				</div>
+				<div id=main>
+					<div id=ex1 class=box1>
+						<!--タイトル-->
+						<H3>(線形)静強度解析</H3>
 
-</DIV>
+						<!--文章-->
 
+						<p>
+							最も基本的な解析であり、構造の静的な強度を評価できます。<br>
+							車両一両または車両部品等を弾性体でモデル化し、JISで規定される荷重等を負荷した<br>
+							場合、構造的に問題ないか(壊れる部品はないか、どのように変形するか)を確認します。<br>
+							締結品・溶接部も含めた静強度／疲労強度評価も対応可能です。<br>
+							<br>
+							静解析では、入力荷重及びその応答が時間的に変化しない、または時間的にゆっくりで<br>
+							無視し得る状態を扱います。時間的変化を考慮する場合は、動解析が必要となります。<br>
+							<br>
+							また線形静解析では、変位が微小であるという前提があるため、ひずみが10%を超える<br>
+							ような大変形問題等では正確な値を得ることができません。このような大変形<br>
+							（塑性域を含める）を扱う場合は、非線形解析が必要となります。<br>
+						</p>
 
-<div id=wrap>
-<div id=cont-main>
-<div id=head>
-<h1>構造解析チームで対応する解析一覧表</h1>
+						<!--文章　おわり-->
 
-<!--このページを印刷に関する設定-->
-<form class="text_align_right">
-    <input type="button" value="このページを印刷" onclick="window.print();" />
-</form>
-<!--このページを印刷に関する設定-->
-
-
-<HR>
-</div>
-<div id=main>
-
-
-
-<div id=ex1 class=box1>
-
-<!--タイトル-->
-<H3>(線形)静強度解析</H3>
-
-<!--文章-->
-
-<p>
-最も基本的な解析であり、構造の静的な強度を評価できます。<br>
-車両一両または車両部品等を弾性体でモデル化し、JISで規定される荷重等を負荷した<br>
-場合、構造的に問題ないか(壊れる部品はないか、どのように変形するか)を確認します。<br>
-締結品・溶接部も含めた静強度／疲労強度評価も対応可能です。<br>
-<br>
-静解析では、入力荷重及びその応答が時間的に変化しない、または時間的にゆっくりで<br>
-無視し得る状態を扱います。時間的変化を考慮する場合は、動解析が必要となります。<br>
-<br>
-また線形静解析では、変位が微小であるという前提があるため、ひずみが10%を超える<br>
-ような大変形問題等では正確な値を得ることができません。このような大変形<br>
-（塑性域を含める）を扱う場合は、非線形解析が必要となります。<br>
-</p>
-
-<!--文章　おわり-->
-
-<div class=image>
-<div class = extra>
+						<div class=image>
+							<div class = extra>
 								<h2 id = "h2plus"><b>[RD解析事例]</b></h2>
 								<TABLE>			<!--<table>は表を作成します。 tableのタグ内においてはth,tr,tdで管理されます。それぞれタイトル、行、列を管理します。-->
 									<tr>
@@ -144,17 +127,14 @@
 									</tr>
 								</TABLE>
 							</div>
+						</div>
+						<p id=back><a href="#" onClick="history.back(); return false;" >前のページにもどる</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<p id=back><a href="#" onClick="history.back(); return false;" >前のページにもどる</a></p>
-</div>
-
-
-
-
-
-
-
-</div></div></div></div>
 
 </body>
 </html>
